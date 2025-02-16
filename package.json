@@ -1,0 +1,55 @@
+{
+  "name": "ay_directory",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "predev": "npm run typegen",
+    "prebuild": "npm run typegen",
+    "typegen": "sanity schema extract --path=./sanity/extract.json && sanity typegen generate"
+  },
+  "packageManager": "npm@10.5.2",
+  "overrides": {
+    "react": "$react",
+    "react-dom": "$react-dom"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.1.2",
+    "@sanity/image-url": "^1.1.0",
+    "@sanity/vision": "^3.75.0",
+    "@tailwindcss/typography": "^0.5.16",
+    "amqplib": "^0.10.5",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "kill-port": "^2.0.1",
+    "lucide-react": "^0.475.0",
+    "markdown-it": "^14.1.0",
+    "next": "15.1.7",
+    "next-auth": "^5.0.0-beta.25",
+    "next-sanity": "^9.8.57",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sanity": "^3.75.0",
+    "sanity-plugin-markdown": "^5.0.0",
+    "server-only": "^0.0.1",
+    "styled-components": "^6.1.15",
+    "tailwind": "^4.0.0",
+    "tailwind-merge": "^3.0.1",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/markdown-it": "^14.1.2",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.7",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5"
+  }
+}
