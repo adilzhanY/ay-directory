@@ -7,7 +7,7 @@ import React, { Suspense } from 'react'
 import Image from 'next/image'
 import markdownit from 'markdown-it';
 import { Skeleton } from '@/components/ui/skeleton';
-import View from '@/components/view';
+import View from '@/components/View';
 
 
 

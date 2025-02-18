@@ -16,9 +16,7 @@ const config: Config = {
             colors: {
                 primary: {
                     "100": "#f79eff",//light purple
-                    DEFAULT: "#9d20a8",//purple
-                    'gradient-start': '#3a0ca3', // Dark Purple
-                    'gradient-end': '#190a4b',
+                    DEFAULT: "#3c0f40",//purple
                 },
                 secondary: "#FBE843",
                 black: {
