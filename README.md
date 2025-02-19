@@ -1,4 +1,4 @@
-### This project is still in development ###
+### Welcome to my Next.js project! ###
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
