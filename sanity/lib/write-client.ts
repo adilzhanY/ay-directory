@@ -8,7 +8,7 @@ export const writeClient = createClient({
   dataset,
   apiVersion,
   useCdn: false,
-  token, // Set to false if statically generating pages, using ISR or tag-based revalidation
+  token // Set to false if statically generating pages, using ISR or tag-based revalidation
 })
 
 if(!writeClient.config().token){
