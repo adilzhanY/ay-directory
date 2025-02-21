@@ -8,6 +8,10 @@ import { auth, signOut, signIn } from '@/auth';
 import { BadgePlus, LogOut } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 
+
+//<span className='max-sm:hidden'>Create</span>
+//<BadgePlus className="size-6 sm:hidden" />
+
 const Navbar = async () => {
     const session = await auth();
 
@@ -22,7 +26,11 @@ const Navbar = async () => {
                     {session && session?.user ? (
                         <>
                             <Link href="/startup/create">
-                                <span className='max-sm:hidden'>Create</span>
+                                <span
+                                    className="max-sm:hidden align-middle select-none font-semibold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-base py-3 px-6 border-[3px] border-gray-900 text-gray-900 hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] rounded-full"
+                                >
+                                    Create
+                                </span>
                                 <BadgePlus className="size-6 sm:hidden" />
 
                             </Link>
@@ -32,7 +40,11 @@ const Navbar = async () => {
                                 await signOut({ redirectTo: "/" });
                             }}>
                                 <button type="submit">
-                                    <span className='max-sm:hidden'>LogOut</span>
+                                    <span
+                                        className="max-sm:hidden align-middle select-none font-semibold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-base py-3 px-6 border-[3px] border-gray-900 text-gray-900 hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] rounded-full"
+                                    >
+                                        Log Out
+                                    </span>
                                     <LogOut className="size-6 sm:hidden text-red-500" />
 
                                 </button>
@@ -52,7 +64,11 @@ const Navbar = async () => {
                             await signIn('github')
                         }}>
                             <button type="submit">
-                                Login
+                                <span
+                                    className="max-sm:hidden align-middle select-none font-semibold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-base py-3 px-6 border-[3px] border-gray-900 text-gray-900 hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] rounded-full"
+                                >
+                                    Log In
+                                </span>
 
                             </button>
 

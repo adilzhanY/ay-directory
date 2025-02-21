@@ -10,8 +10,13 @@ const UserStartups = async ({id}: {id: string}) => {
     })
     return (
         <>
-            {startups.length > 0 ? startups.map((startup: StartupTypeCard) => (
-                <StartupCard key={startup._id} post={startup}/>
+            {startups.length > 0 ? startups.map((startup: StartupTypeCard, index: number) => (
+                <StartupCard
+                key={startup?._id}
+                post={startup}
+                className="animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              />
             )) : (
                 <p className='no-result'>No posts yet</p>
             )}

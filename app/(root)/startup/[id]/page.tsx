@@ -42,11 +42,6 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
       </section>
 
       <section className="section_container">
-        <img
-          src={post.image}
-          alt="thumbnail"
-          className="w-full h-auto rounded-xl"
-        />
 
         <div className="space-y-5 mt-10 max-w-4xl mx-auto">
           <div className="flex-between gap-5">
@@ -76,12 +71,17 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
           <h3 className="text-30-bold">Pitch Details</h3>
           {parsedContent ? (
             <article
-              className="prose max-w-4xl font-work-sans break-all"
+              className="prose max-w-4xl font-work-sans break-words"
               dangerouslySetInnerHTML={{ __html: parsedContent }}
             />
           ) : (
             <p className="no-result">No details provided</p>
           )}
+          <img
+            src={post.image}
+            alt="thumbnail"
+            className="w-full h-auto rounded-xl"
+          />
         </div>
 
         <hr className="divider" />
@@ -92,7 +92,12 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
 
             <ul className="mt-7 card_grid-sm">
               {editorPosts.map((post: StartupTypeCard, i: number) => (
-                <StartupCard key={i} post={post} />
+                <StartupCard
+                  key={post?._id}
+                  post={post}
+                  className="animate-fade-in"
+                  style={{ animationDelay: `${i * 0.1}s` }}
+                />
               ))}
             </ul>
           </div>
