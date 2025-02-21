@@ -7,6 +7,8 @@ AY Directory is a modern web application built with Next.js, designed to serve a
 Clone the repo:
 ```bash
 git clone https://github.com/adilzhanY/ay-directory.git
+```
+```bash
 cd ay-directory
 ```
 ## Installation
